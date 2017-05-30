@@ -1,0 +1,15 @@
+.new-room-button {
+     border: 1px black;
+     background-color: grey;
+     padding: 1.5rem;
+     margin-left: 0.5rem;
+ }
+ 
+ .room-nav {
+     background-color: lightgray;
+     position: fixed;
+     width: 25%;
+     top: 0px;
+     left: 0px;
+     height: 100%;
+ } 
