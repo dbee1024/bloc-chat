@@ -1,11 +1,17 @@
 (function() {
      function ModalCtrl(Room, $uibModalInstance) {
-         this.cancel = function () {
+         var modal = this;
+         modal.cancel = function () {
              $uibModalInstance.dismiss();
          };
          
-         this.submit = function () {
-             Room.add(this.newRoom);
+         modal.createRoom = function () {
+             Room.add(modal.newRoom);
+             $uibModalInstance.close();
+         };
+         
+         modal.createUsername = function () {
+             $cookies.put('blocChatCurrentUser', modal.username);
              $uibModalInstance.close();
          };
      }

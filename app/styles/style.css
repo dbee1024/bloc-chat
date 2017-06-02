@@ -27,3 +27,49 @@
 .room-name:hover {
     cursor: pointer;
 }
+
+/*message styles*/
+.messages {
+    position: fixed;
+    top: 0px;
+    left: 250px;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    overflow: scroll;
+}
+
+
+.messages-body {
+    padding-right: 10px;
+}
+
+.messages-body .username {
+    font-weight: bold;
+}
+
+.messages-body .timestamp {
+    float: right;
+    padding-right: 100px;
+}
+
+.messages-body .username .timestamp {
+    display: inline-block;
+}
+
+.messages-body .user-message {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.message-field {
+    bottom: 0;
+    padding-bottom: 5px;
+    position: fixed;
+}
+
+.message-box {
+    width: 800px;
+}
