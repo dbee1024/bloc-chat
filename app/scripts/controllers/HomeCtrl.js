@@ -4,6 +4,7 @@
         home.rooms = Room.all;
         home.currentRoom = null;
         home.currentUser = $cookies.get('blocChatCurrentUser');
+        home.message = [];
         
         home.addRoom = function() {
             $uibModal.open({
@@ -16,12 +17,16 @@
         home.setCurrentRoom = function (room) {
             home.currentRoom = room;
             home.messages = Message.getByRoomId(home.currentRoom.$id);
+            console.log("setCurrentRoom");
         }
         
         home.sendMessage = function () {
-            home.newMessage.roomId = home.currentRoom;
+            
+            home.newMessage.roomId = home.currentRoom.$id;
             home.newMessage.username = home.currentUser;
+       //     home.message.push(home.newMesage.content);
             Message.send(home.newMessage);
+        //    console.log(message);
         }
         
     }
